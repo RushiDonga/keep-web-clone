@@ -17,6 +17,7 @@ const link = from([
   new HttpLink({ uri: 'https://google-keep-clone-server.herokuapp.com/graphql' })
 ]);
 
+
 // main interaction with graphqlServer
 const client = new ApolloClient({
   cache: new InMemoryCache(),
