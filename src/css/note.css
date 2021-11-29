@@ -1,0 +1,20 @@
+.note-main{
+	height : fit-content
+}
+.note-main:hover{
+	cursor: default;
+	transition: cubic-bezier(0.075, 0.82, 0.165, 1) ease-in-out;
+	transition-duration: 500ms;
+	transition-property: all;
+	transform-style: flat;
+-webkit-box-shadow: 0 0 7px 1px #999;
+box-shadow: 0 0 7px 1px#999;	
+	 -moz-box-shadow: 0 0 7px 1px #999;
+	 transition: cubic-bezier(0.999, 0.999, 0.999 0.999);
+	
+}
+
+
+.modal{
+	width : 200%;
+}

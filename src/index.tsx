@@ -3,10 +3,29 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import {
+  ApolloClient,
+  ApolloProvider,
+  InMemoryCache,
+  from,
+  HttpLink
+} from '@apollo/client';
+// import { onError } from '@apollo/client/link/error';
+//link kind of middleware
+const link = from([
+  // errorLink,
+  new HttpLink({ uri: 'http://localhost:4000/' })
+]);
+// main interaction with graphqlServer
+const client = new ApolloClient({
+  cache: new InMemoryCache(),
+  link: link
+});
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ApolloProvider client={client}>
+      <App />
+    </ApolloProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
