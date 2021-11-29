@@ -14,7 +14,7 @@ import {
 //link kind of middleware
 const link = from([
   // errorLink,
-  new HttpLink({ uri: 'https://google-keep-clone-server.herokuapp.com/' })
+  new HttpLink({ uri: 'https://google-keep-clone-server.herokuapp.com/graphql' })
 ]);
 
 // main interaction with graphqlServer
