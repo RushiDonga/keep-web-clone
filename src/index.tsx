@@ -14,7 +14,7 @@ import {
 //link kind of middleware
 const link = from([
   // errorLink,
-  new HttpLink({ uri: 'http://localhost:4000/' })
+  new HttpLink({ uri: 'https://google-keep-clone-server.herokuapp.com/' })
 ]);
 // main interaction with graphqlServer
 const client = new ApolloClient({
